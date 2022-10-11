@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class UsPublicDataComponent implements OnInit {
 
   constructor() { }
-
+  
+  usPublicData={}
   ngOnInit(): void {
   }
 
