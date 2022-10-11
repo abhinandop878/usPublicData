@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UsPublicDataComponent } from './us-public-data/us-public-data.component';
+import {HttpClientModule} from '@angular/common/http'
 const appRoutes:Routes=[
   {
     path:"",component:UsPublicDataComponent
@@ -20,7 +21,8 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

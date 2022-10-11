@@ -6,23 +6,17 @@
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">ID Nation</th>
                     <th scope="col">Nation</th>
-                    <th scope="col">ID Year</th>
                     <th scope="col">Year</th>
-                    <th scope="col">Slug Nation</th>
                     <th scope="col">Population</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let i of usPublicData.data">
-                    <td>{{i.ID Nation}}</td>
                     <td>{{i.Nation}}</td>
-                    <td>{{i.ID Year}}</td>
                     <td>{{i.Year}}</td>
-                    <td>{{i.Slug Nation}}</td>
                     <td>{{i.Population}}</td>
-                  </tr>
+                    </tr>
                 </tbody>
             </table>
         </div>
