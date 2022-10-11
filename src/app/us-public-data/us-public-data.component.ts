@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-us-public-data',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsPublicDataComponent implements OnInit {
 
-  constructor() { }
-  
-  usPublicData={}
+  constructor(private myapi:ApiService) { 
+    this.fetchData()
+  }
+  fetchData=()=>{
+    this.myapi.viewPublicData().subscribe((data)=>{
+      this.usPublicData=data
+    })
+  }
+  usPublicData:any={}
   ngOnInit(): void {
   }
 
